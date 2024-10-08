@@ -1,0 +1,291 @@
+
+body {
+    width: 100%;
+    font-size: 15px;
+    font-weight: 300;
+    color: $Color;
+    font-family: $fontFamily;
+}
+
+
+
+
+
+ header {
+    
+        width: 100%;
+        padding: 20px 50px;
+        @include flexbox;
+        background-color:$grey;
+    
+        @include tablets{
+
+        width: 100%;
+        padding: 20px 50px;
+        @include flexbox;
+        background-color:$grey;
+    
+        }
+    
+
+    .header__iconos--logo {
+        width: 40px;
+        @extend%cursor;
+        display: inline-block;
+
+
+        @include tablets{
+             width: 30px;
+             @extend%cursor;
+             display: inline-block;
+        }
+    }
+    
+    .header__iconos--img {
+        width:100px;
+
+
+        @include tablets{
+        width: 50px;
+            
+        }
+    }
+  }
+
+
+
+   main ,section {
+    .baner__img {
+        width: 100%;
+        padding: 60px 0;
+        text-align: center;
+        background-image: url("../img/publicidad .avif");
+        background-repeat: no-repeat;
+        background-size: cover;
+        color:$Withe;
+        background-position:80% ;
+
+
+        @include phone{
+            background-position:50% ;
+            
+        }
+    }
+    
+    .baner__img--text {
+        width: 100%;
+        font-weight: 600;
+        font-size: 30px;
+        margin: 10px;
+
+        @include phone{
+          
+            font-size: 25px;
+
+        }
+    }
+    
+    .baner__img--text2 {
+        width:100%;
+        margin: 0 auto;
+        font-size: 25px;
+        opacity: 0.7;
+
+        @include phone{
+            
+            font-size: 19px;
+            
+    
+        }
+    }
+  }
+
+
+
+
+main,  section , article {
+    .products__diseño {
+        width: 80%;
+        margin: 50px  auto;
+        padding: 20px;
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+        text-align: center;
+        gap:40px 0px  ;
+
+       @include tablets{
+        width: 80%;
+        margin: 50px  auto;
+        padding: 20px;
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+        text-align: center;
+        gap:40px 0px  ;
+       }
+    }
+    
+    .products__article {
+        @extend %cursor
+        
+    }
+    
+    .products__article--img{
+        width: 200px;
+        margin-bottom: 15px;
+
+        @include phone{
+            width: 150px;
+        }
+        
+    }
+    
+    .products__article--title {
+        font-weight: 600;
+        font-size: 17px;
+        margin-bottom: 5px;
+    }
+    
+    .products__article--text {
+        font-weight: 300;
+        font-size: 15px;
+    }
+
+    
+}
+
+
+
+
+   .cart__diseño {
+        width: 450px;
+        background-color:$Withe;
+        padding: 25px;
+        box-sizing: border-box;
+        height: 100%;
+        position: fixed;
+        right: -100% ;
+        top: 130px;
+        box-shadow: -19px  -1px  22px  -15px rgba(0, 0, 0, 0.45);
+        transition: all .50s ease;
+        display: block;
+
+        @include phone {
+            width: 300px;  
+            top: 200px;;
+        }
+
+        &.sow{
+            right: 0;
+            transition: all .50s ease;
+        }
+
+        
+
+    .cart_img {
+        width: 50px;
+        margin: 10px 0 ;
+
+
+        @include phone{
+            width: 30px;
+            margin-top: 10px;
+        }
+            
+    }
+
+    .texto{
+        display: inline;
+        padding: 15px;
+
+
+        @include phone{
+            display: block;
+            padding: 5px;
+        }
+        
+    }
+
+    .cart-total{
+        margin-top: 30px;
+        text-align: end;
+    }
+
+    .cart__text{
+        text-align: center;
+    }
+
+
+
+    .cart-items{
+        border-bottom: 1px solid $grey;
+        align-items: center;
+        padding: 15px;
+        
+    }
+    
+    
+
+}  
+
+
+
+
+
+.menu {
+    width: 300px;
+    background-color:$Withe;
+    padding: 10px;
+    box-sizing: border-box;
+    height: 100%;
+    position: fixed;
+    left:-100% ;
+    top: 147px;
+    box-shadow: -5px  1px  25px  15px rgba(0, 0, 0, 0.45); 
+    transition: all .25s ease;
+
+    &.show{
+        left: 0;
+        transition: all .25s ease;
+    }
+
+    &.close{
+        left: -100%;
+        transition: all .50s ease;
+    }
+
+
+    .menu_pos{
+        display: flex;
+        padding: 30px;
+        align-items: center;
+        margin: 0;
+       
+    }
+
+    .items {
+        margin: 5px;
+        
+    }
+
+    .container{
+        text-align: right;
+
+       img{
+        @extend%cursor;
+       }
+    }
+}
+
+
+   
+        
+
+    
+
+
+
+
+
+
